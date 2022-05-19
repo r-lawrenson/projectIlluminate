@@ -1,4 +1,4 @@
-hello
+hello there :) 
 
 # Getting Started with Create React App
 
