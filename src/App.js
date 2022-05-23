@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Header } from './components/headers'
 import { User } from './components/user'
 import { fetchImages } from './utils';
-import { LogForm } from './components/form.js'
+import { LogForm } from './components/form.js';
+import Quote from './components/quote.js';
 import './App.css';
 
 const App = () => {
@@ -19,11 +20,13 @@ const App = () => {
     <div className="App">
       <div id="header">
         <Header  />
+        
       </div>
 
       
           {!user && <LogForm setUser={setUser} />}
-          {/* if user is not true hide logform */}    
+          {/* if user is not true hide logform */}
+          <Quote />    
       <User user={user} bio={user}/>
    
    
