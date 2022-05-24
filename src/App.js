@@ -3,7 +3,6 @@ import { Header } from './components/headers'
 import { User } from './components/user'
 import { fetchImages } from './utils';
 import { LogForm } from './components/form.js';
-import { Fetch } from './components/quote.js';
 import './App.css';
 
 const App = () => {
@@ -13,7 +12,7 @@ const App = () => {
 
 
   useEffect(() => {
-    Fetch(setImages)
+    fetchImages(setImages)
   }, [])
 
   return (
@@ -25,7 +24,8 @@ const App = () => {
 
       
           {!user && <LogForm setUser={setUser} />}
-          {/* if user is not true hide logform */}    
+          {/* if user is not true hide logform */}
+          <Quote />    
       <User user={user} bio={user}/>
    
    
@@ -33,7 +33,7 @@ const App = () => {
       {images.map((image, i) => {
         return (
           <img 
-            src={image.media} 
+            src={image.download_url} 
             alt={`random file from unsplash ${i}`} 
           />
           )
