@@ -1,42 +1,17 @@
-import { useEffect, useState } from 'react';
-import '../App.css';
+ export const Fetch = () => {
 
-const Quote = () => {
-	const [quote, setQuote] = useState([]);
-	const [error, setError] = useState(null);
+  const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'healthruwords.p.rapidapi.com',
+		'X-RapidAPI-Key': '035a2b44c4msh753988870b4a387p1fc448jsn01c8c79f1a04'
+	}
+  };
 
-	useEffect(() => {
-		const fetchQuote = async () => {
-			try {
-				const response = await fetch(
-					'https://zenquotes.io/api/random',
-				);
-				if (!response.ok) {
-					throw new Error(response.statusText);
-				}
+  fetch('https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731', options)
+	  .then(response => response.json())
+	  .then(response => console.log(response))
+	  .catch(err => console.error(err));
 
-				const data = await response.json();
-				setQuote(data);
-			} catch (err) {
-				setError('Could not fetch data');
-				console.log(err.message);
-			}
-		};
-		fetchQuote();
-	}, []);
+ }
 
-	return (
-		<div>
-			{quote.map((quotes, i) => (
-                <div key={i}>
-                    {error && <p>{error}</p>}
-                    <h1>{quotes.q}</h1>
-                    <h1>{quotes.a}</h1>
-                </div>
-            ))}
-			
-		</div>
-	);
-}
-
-export default Quote;
