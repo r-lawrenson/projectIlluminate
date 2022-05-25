@@ -14,6 +14,7 @@ import { ResetPassword } from './pages/ResetPassword'
 import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
+import { Journal } from './pages/Journal'
 
 const App = () => {
   // const [userInput, setUserInput] = useState()
@@ -32,16 +33,21 @@ const App = () => {
         <Link to="/">Home</Link>
         <Link to="/signup">Sign Up</Link>
         <Link to="/login">Login</Link>
-        {/* <Link to="/resetpassword">Reset Password</Link> */}
+        <Link to="/resetpassword">Reset Password</Link>
         <Link to="/helpfullinks">Helpful Links</Link>
-        {/* <Link to="/tranquilzone">Tranquil Zone</Link> */}
-        {/* <Link to="/userprofile">User Profile</Link> */}
+        <Link to="/tranquilzone">Tranquil Zone</Link>
+        <Link to="/userprofile">User Profile</Link>
+        <Link to="/journal">Journal</Link> 
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/signup" element={<SignUp />}/>
         <Route path="/login" element={<LogIn />}/>
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
+        <Route path="/journal" element={<Journal />}/>
+        <Route path="/tranquilzone" element={<TranquilZone />}/>
+        <Route path="/userprofile" element={<UserProfile />}/>
+        <Route path="/resetpassword" element={<ResetPassword />}/>
       </Routes>
       </BrowserRouter>
           
