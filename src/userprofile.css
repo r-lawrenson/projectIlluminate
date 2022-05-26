@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.userprofile {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column
+}
+
+
+
+.userprofile img {
+    height:30vh;
+    width:40vw;
+    margin-bottom:2%
+}
+ .buttons {
+     display:flex;
+     margin-bottom:2%;
+     gap:10px
+ }
+
+ .userlinks {
+     margin-bottom:10px
+ }
+ .userlinks button {
+     height:100px;
+     width:400px;
+     border-radius:10px;
+     cursor:pointer;
+ }
