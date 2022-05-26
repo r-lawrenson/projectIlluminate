@@ -16,7 +16,7 @@ export const SignUp = ({ setUser }) => {
 		<form id='form' onSubmit={ submitHandler }> 
 		   <input onChange={(e) => setUsername(e.target.value)}/>
 		   <input onChange={(e) => setEmail(e.target.value)}/>
-		   <input onChange={(e) => setPassword(e.target.value)}/>
+		   <input type ='password' onChange={(e) => setPassword(e.target.value)}/>
 		   <button id='signUpBtn' type='submit'>Sign-Up</button>
 
 		</form>

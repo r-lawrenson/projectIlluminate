@@ -34,7 +34,8 @@ export const fetchImages = async (setter) => {
 
 export const signUp = async (username, email, password, setter) => {
 	try {
-		const res = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+		console.log(username, email, password)
+		const res = await fetch(`${process.env.REACT_APP_REST_API}signup`, {
 			method:"POST",
 			headers: {"Content-Type": "application/json"},
 			body: JSON.stringify({
@@ -55,7 +56,7 @@ export const signUp = async (username, email, password, setter) => {
 
 export const login = async (setter) => {
 try {
-	const res = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+	const res = await fetch(`${process.env.REACT_APP_REST_API}login`, {
 		method:'GET',
 		headers: {Authorization: localStorage.getItem('myToken')}
 	})
@@ -70,7 +71,7 @@ export const logout = async (e, setUser, setAuth) => {
 	e.preventDefault()
 	const res = await fetch(`${process.env.REACT_APP_APP_URL}/users/logout`, {
 		method: 'GET',
-		headers: {'Authorization': `${localStorage.getItem('MyToken')}`}
+		headers: {'Authorization': localStorage.getItem('MyToken')},
 	})
 	await res.json()
 	setUser('')
