@@ -41,7 +41,8 @@ const App = () => {
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/signup" element={<SignUp />}/>
+        {/* <Route path="/signup" element={<SignUp />}/> */}
+        <Route path="/signup" element={<SignUp setUser={setUser}  />} />
         <Route path="/login" element={<LogIn />}/>
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
         <Route path="/journal" element={<Journal />}/>
