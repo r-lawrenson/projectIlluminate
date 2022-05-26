@@ -15,6 +15,8 @@ import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
 import { Journal } from './pages/Journal'
+import { Resource } from './pages/ResourcePage';
+
 
 const App = () => {
   // const [userInput, setUserInput] = useState()
@@ -38,6 +40,7 @@ const App = () => {
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
         <Link to="/journal">Journal</Link> 
+        <Link to="/resource">Resources</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -48,6 +51,7 @@ const App = () => {
         <Route path="/tranquilzone" element={<TranquilZone />}/>
         <Route path="/userprofile" element={<UserProfile />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>
+        <Route path="/resource" element={<Resource />}/>
       </Routes>
       </BrowserRouter>
           
