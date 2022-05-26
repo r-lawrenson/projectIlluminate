@@ -4,7 +4,7 @@
     padding:0;
 }
 
-.homepage {
+.userprofile {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
 
 
 
-.homepage img {
+.userprofile img {
     height:30vh;
     width:40vw;
     margin-bottom:2%
@@ -23,9 +23,13 @@
      margin-bottom:2%;
      gap:10px
  }
- .homepage button {
-     height:40px;
-     width:370px;
-     border-radius:20px;
+
+ .userlinks {
+     margin-bottom:10px
+ }
+ .userlinks button {
+     height:100px;
+     width:400px;
+     border-radius:10px;
      cursor:pointer;
  }
