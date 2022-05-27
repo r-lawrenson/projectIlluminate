@@ -23,15 +23,16 @@ export const signUp = async (username, email, password, setter) => {
 			})
 
 		})
-		// const data = await res.json()
-		// if (res.ok) {
-			let data = await res.json()
+	
+		let data = await res.json()
 			console.info(data)	
+		if(data.message) {
+				return false
+		} else{
 			setter(data.newUser.username)
-		localStorage.setItem('myToken', data.token)
-		// } else {
-		// 	alert ('Invalid credentials please try again')
-		// }
+		    localStorage.setItem('myToken', data.token)
+		    return true
+		}
 	
 
 	} catch (error) {
@@ -54,7 +55,7 @@ try {
 
 export const logout = async (e, setUser, setAuth) => {
 	e.preventDefault()
-	const res = await fetch(`${process.env.REACT_APP_APP_URL}/users/logout`, {
+	const res = await fetch(`${process.env.REACT_APP_APP_URL}users/logout`, {
 		method: 'GET',
 		headers: {'Authorization': localStorage.getItem('MyToken')},
 	})
@@ -63,3 +64,4 @@ export const logout = async (e, setUser, setAuth) => {
 	localStorage.removeItem('MyToken')
 	setAuth(false)
 }
+
