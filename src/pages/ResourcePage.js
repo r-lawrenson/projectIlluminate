@@ -10,7 +10,7 @@ import { SearchResource } from "../components/resources";
 
   return (
       <div>
-      <h2 title={username}></h2>
+      <p title={username}></p>
       <SearchResource setUsername={setUsername}/>
       </div>
   )  
