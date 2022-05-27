@@ -27,16 +27,14 @@ export const signUp = async (username, email, password, setter) => {
 		let data = await res.json()
 			console.info(data)	
 		if(data.message) {
-				return false
+				return 'No';
 		} else{
 			setter(data.newUser.username)
 		    localStorage.setItem('myToken', data.token)
-		    return true
-		}
-	
-
+		    return 'Yes';
+	    }
 	} catch (error) {
-		console.log(error)
+		console.log(error);
 	}
 }
 
