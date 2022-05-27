@@ -13,24 +13,19 @@ export const SignUp = ({ user, setUser }) => {
             window.location.reload()
     }
 
-	const changeHandler = (e) => {
+	const submitHandler = (e) => {
 		e.preventDefault()
         // console.log(username, email, password)
-		
+		    
         console.log(error)
-        if (!error) {
-            signUp(username, email, password, setUser)
+        try 
+            {signUp(username, email, password, setUser)
             setIsLoggedIn(true)
-        } if (error) {
+        } catch (error) {
+            alert(error)
             refresh()
             setIsLoggedIn(false)
-            
-        } else {
-            alert ('Username taken please try again!')
-            refresh()
-        }
-     
-	}
+        }}
     
 
 	const logout = () => {
@@ -40,30 +35,41 @@ export const SignUp = ({ user, setUser }) => {
 
 
     return (
-		// <>
-		  <div id='loginForm'>
-				<form onSubmit={changeHandler}>
-				  <input
-					type="text"
-					onChange={(e) => setUsername(e.target.value)}
-					placeholder="Username"
-				  />
-				  <input
-					type="email"
-					onChange={(e) => setEmail(e.target.value)}
-					placeholder="Email"
-				  />
-				  <input
-					type="password"
-					onChange={(e) => setPassword(e.target.value)}
-					placeholder="Password"
-				  />
-				  <button type="submit" onClick={changeHandler}>
-					GO
-				  </button>
-				</form>
+        <>
+        <div id='loginForm'>
+          {!isLoggedin ? (
+            <>
+              <form onSubmit={submitHandler}>
+                <input
+                  type="text"
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Username"
+                />
+                <input
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                />
+                <button type="submit" onClick={submitHandler}>
+                  GO
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <h2>{user} is logged in</h2>
+              <button onClickCapture={logout}>logout user</button>
+            </>
+          )}
         </div>
-	  );
+      </>
+    );
+	  
 
 
 
