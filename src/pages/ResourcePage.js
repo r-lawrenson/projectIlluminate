@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { SearchResource } from "../components/resources";
 
-
-
-
-
  export const Resource = () => {
     const [username, setUsername] = useState();
 
@@ -14,5 +10,4 @@ import { SearchResource } from "../components/resources";
       <SearchResource setUsername={setUsername}/>
       </div>
   )  
-
 };

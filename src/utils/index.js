@@ -77,16 +77,18 @@ export const logout = async (e, setUser, setAuth) => {
 	localStorage.removeItem('MyToken')
 	setAuth(false)
 }
-export const resourcesSearch = async (setter) => {
+export const resourcesSearch = async (keywords, setter) => {
 	try {
-		const response = await fetch(`${process.env.REACT_APP_REST_API}resource`,{
+		const response = await fetch(`${process.env.REACT_APP_REST_API}resource`, {
 			method:"GET",
-			headers: {"Content-Type": "application/json"},
-			body: null
+			headers:{"Content-Type":"application/json"},
+			
 			
 		});
 		const data = await response.json();
-		setter(data.user);
+		console.log(data);
+		setter(data)
+		
 	} catch (error) {
 		console.log(error)
 	}
