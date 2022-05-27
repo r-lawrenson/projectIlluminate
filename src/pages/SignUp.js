@@ -15,17 +15,17 @@ export const SignUp = ({ user, setUser }) => {
 
 	const submitHandler = (e) => {
 		e.preventDefault()
-        // console.log(username, email, password)
-		    
         console.log(error)
-        try 
-            {signUp(username, email, password, setUser)
-            setIsLoggedIn(true)
+        try {
+            setIsLoggedIn(signUp(username, email, password, setUser))
+         if(!isLoggedin) {
+             throw new Error()
+         }
         } catch (error) {
-            alert(error)
             refresh()
             setIsLoggedIn(false)
         }}
+            
     
 
 	const logout = () => {
