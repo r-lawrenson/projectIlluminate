@@ -1,3 +1,6 @@
+import { useEffect } from "react"
+
+
 export const fetchImages = async (setter) => {
 	try {
 		const response = await fetch('https://picsum.photos/v2/list')
@@ -77,15 +80,12 @@ export const logout = async (e, setUser, setAuth) => {
 	localStorage.removeItem('MyToken')
 	setAuth(false)
 }
-export const resourcesSearch = async (keywords, setter) => {
+export const resourcesSearch = async (setter) => {
 	try {
 		const response = await fetch(`${process.env.REACT_APP_REST_API}resource`, {
-			method:"GET",
-			headers:{"Content-Type":"application/json"},
-			
-			
+			method:"GET",	
 		});
-		const data = await response.json();
+		const data = await response.json()
 		console.log(data);
 		setter(data)
 		

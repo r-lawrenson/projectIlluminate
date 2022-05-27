@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { SearchResource } from "../components/resources";
 
- export const Resource = () => {
-    const [username, setUsername] = useState();
 
+ export const Resource = () => {
+    const [search, setSearch] = useState();
+
+    
   return (
       <div>
-      <p title={username}></p>
-      <SearchResource setUsername={setUsername}/>
+      
+     <SearchResource setSearch={setSearch}/>
+      <p>{}</p>
       </div>
   )  
 };
