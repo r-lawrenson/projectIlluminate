@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { signUp } from '../utils'
 
 export const SignUp = ({ user, setUser }) => {
@@ -6,29 +6,26 @@ export const SignUp = ({ user, setUser }) => {
 	const [email, setEmail] = useState()
 	const [password, setPassword] = useState()
     const [isLoggedin, setIsLoggedIn] = useState(false)
-    const [error, setError] = useState(false)
+    const [error, setError] = useState()
+
+    useEffect(() => {
+        if (isLoggedin === "No") {
+            refresh()
+        }
+    },[isLoggedin, setIsLoggedIn])
 
     const refresh = () => {
             alert('This username already exists')
             window.location.reload()
     }
 
-	const submitHandler = (e) => {
+	const submitHandler = async (e) => {
 		e.preventDefault()
         console.log(error)
-        try {
-            setIsLoggedIn(signUp(username, email, password, setUser))
-         if(!isLoggedin) {
-             throw new Error()
-         }
-        } catch (error) {
-            refresh()
-            setIsLoggedIn(false)
-        }}
-            
+        setIsLoggedIn(await signUp(username, email, password, setUser)) 
+    }
     
-
-	const logout = () => {
+    const logout = () => {
 		localStorage.removeItem('token-info')
 		setIsLoggedIn(false)
 	}
@@ -37,7 +34,7 @@ export const SignUp = ({ user, setUser }) => {
     return (
         <>
         <div id='loginForm'>
-          {!isLoggedin ? (
+          {!isLoggedin || isLoggedin === 'No' ? (
             <>
               <form onSubmit={submitHandler}>
                 <input
