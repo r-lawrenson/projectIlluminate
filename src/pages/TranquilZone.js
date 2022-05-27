@@ -49,7 +49,7 @@ const fetchPodcast = async (setter) => {
         const { medium } = thumbnails;
         return (
           <li key={id} className="card">
-            <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
+            <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`} target="_blank">
               <p>
                 <img
                   width={medium.width}

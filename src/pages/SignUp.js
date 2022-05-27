@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { signUp } from '../utils'
+// import { useNavigate } from 'react-router-dom'
 
 export const SignUp = ({ user, setUser }) => {
 	const [username, setUsername] = useState()
@@ -7,6 +8,7 @@ export const SignUp = ({ user, setUser }) => {
 	const [password, setPassword] = useState()
     const [isLoggedin, setIsLoggedIn] = useState(false)
     const [error, setError] = useState()
+    // const navigate = useNavigate();
 
     useEffect(() => {
         if (isLoggedin === "No") {
@@ -22,7 +24,7 @@ export const SignUp = ({ user, setUser }) => {
 	const submitHandler = async (e) => {
 		e.preventDefault()
         console.log(error)
-        setIsLoggedIn(await signUp(username, email, password, setUser)) 
+        setIsLoggedIn(await signUp(username, email, password, setUser))
     }
     
     const logout = () => {
