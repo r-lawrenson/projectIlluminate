@@ -14,7 +14,7 @@ import { ResetPassword } from './pages/ResetPassword'
 import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
-import { Journal } from './pages//Journal/Journal'
+import { Journal } from './pages//Journall/journal'
 
 const App = () => {
   // const [userInput, setUserInput] = useState()
