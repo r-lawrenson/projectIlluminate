@@ -33,11 +33,12 @@ const App = () => {
         <Link to="/">Home</Link>
         <Link to="/signup">Sign Up</Link>
         <Link to="/login">Login</Link>
-        <Link to="/resetpassword">Reset Password</Link>
+        {/* <Link to="/resetpassword">Reset Password</Link> */}
         <Link to="/helpfullinks">Helpful Links</Link>
+        <button>Logout</button>
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
-        <Link to="/journal">Journal</Link> 
+        <Link to="/journal">Journal</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
