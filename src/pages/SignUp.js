@@ -63,7 +63,7 @@ export const SignUp = ({ user, setUser }) => {
             </>
           ) : (
             <>
-              <h2>{username} is logged in</h2>
+              {/* <h2>{username} is logged in</h2> */}
               <Navigate to='/userProfile' />
               <button onClickCapture={logout}>logout user</button>
             </>
