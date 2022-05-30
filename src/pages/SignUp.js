@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 import { signUp } from '../utils'
 // import { useNavigate } from 'react-router-dom'
 
@@ -9,6 +10,7 @@ export const SignUp = ({ user, setUser }) => {
     const [isLoggedin, setIsLoggedIn] = useState(false)
     const [error, setError] = useState()
     // const navigate = useNavigate();
+    
 
     useEffect(() => {
         if (isLoggedin === "No") {
@@ -62,6 +64,7 @@ export const SignUp = ({ user, setUser }) => {
           ) : (
             <>
               <h2>{username} is logged in</h2>
+              <Navigate to='/userProfile' />
               <button onClickCapture={logout}>logout user</button>
             </>
           )}
