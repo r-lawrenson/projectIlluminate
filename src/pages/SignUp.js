@@ -28,7 +28,7 @@ export const SignUp = ({ user, setUser }) => {
     }
     
     const logout = () => {
-		localStorage.removeItem('token-info')
+		localStorage.removeItem('myToken')
 		setIsLoggedIn(false)
 	}
 
@@ -61,7 +61,7 @@ export const SignUp = ({ user, setUser }) => {
             </>
           ) : (
             <>
-              <h2>{user} is logged in</h2>
+              <h2>{username} is logged in</h2>
               <button onClickCapture={logout}>logout user</button>
             </>
           )}
