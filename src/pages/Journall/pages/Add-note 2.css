@@ -1,0 +1,8 @@
+.form {
+    display:flex;
+    flex-direction:column;
+}
+
+textarea {
+    background-color:rgba(250, 231, 146, 0.911)
+}

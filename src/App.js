@@ -21,7 +21,6 @@ const App = () => {
   const [user, setUser] = useState()
   const [images, setImages] = useState([])
 
-
   useEffect(() => {
     fetchImages(setImages)
   }, [])
@@ -48,7 +47,7 @@ const App = () => {
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
         <Route path="/journal" element={<Journal />}/>
         <Route path="/tranquilzone" element={<TranquilZone />}/>
-        <Route path="/userprofile" element={<UserProfile />}/>
+        <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>
       </Routes>
       </BrowserRouter>
