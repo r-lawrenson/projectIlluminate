@@ -89,7 +89,7 @@ export const resourcesSearch = async (keywords, setter) => {
 		});
 		const data = await response.json()
 		console.log(data);
-		setter(data)
+		setter(data.keywords)
 		
 	} catch (error) {
 		console.log(error)
