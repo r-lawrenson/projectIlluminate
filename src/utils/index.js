@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 
 export const fetchImages = async (setter) => {
 	try {
@@ -80,10 +78,14 @@ export const logout = async (e, setUser, setAuth) => {
 	localStorage.removeItem('MyToken')
 	setAuth(false)
 }
-export const resourcesSearch = async (setter) => {
+export const resourcesSearch = async (keywords, setter) => {
 	try {
 		const response = await fetch(`${process.env.REACT_APP_REST_API}resource`, {
-			method:"GET",	
+			method:"POST",	
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify({
+				keywords: keywords
+			}),
 		});
 		const data = await response.json()
 		console.log(data);

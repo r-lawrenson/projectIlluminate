@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { resourcesSearch } from "../utils";
 
-export const SearchResource = ({setSearch}) => {
+export const SearchResource = ({ setSearch, search, setResults }) => {
     const [keywords, setKeywords] = useState([]);
 
     const submitHandler = (e) => {
 
         e.preventDefault();
-        resourcesSearch(keywords, setSearch);
+        resourcesSearch(keywords, setResults);
     };
 
     return(
@@ -18,6 +18,7 @@ export const SearchResource = ({setSearch}) => {
 
         <button type="search" id="resource-search">Search</button>
         </form>
+        
         </div>
     )
 }
