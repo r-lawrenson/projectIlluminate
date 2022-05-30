@@ -24,13 +24,9 @@
   padding: 45px 40px 60px;
   width: 85%;
   overflow: hidden;
-  display: grid;
-  grid-template-areas:
-    'header header'
-    'img column';
-  grid-template-columns: 500px 1fr;
-  grid-template-rows: 1fr 1fr ;
-  grid-column-gap: 40px;
+  display:flex;
+  flex-direction: column
+  
 }
 
 .titleBox {
