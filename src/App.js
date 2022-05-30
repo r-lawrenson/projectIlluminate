@@ -14,19 +14,26 @@ import { ResetPassword } from './pages/ResetPassword'
 import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
+<<<<<<< HEAD
 import { Journal } from './pages/Journal'
 import { Resource } from './pages/ResourcePage';
 
+=======
+import { Journal } from './pages//Journall/journal'
+>>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
 
 const App = () => {
   // const [userInput, setUserInput] = useState()
   const [user, setUser] = useState()
   const [images, setImages] = useState([])
 
-
   useEffect(() => {
     fetchImages(setImages)
   }, [])
+
+  const logout = () => {
+		setUser = false
+	}
 
   return (
     <div className="App">
@@ -35,21 +42,27 @@ const App = () => {
         <Link to="/">Home</Link>
         <Link to="/signup">Sign Up</Link>
         <Link to="/login">Login</Link>
-        <Link to="/resetpassword">Reset Password</Link>
+        {/* <Link to="/resetpassword">Reset Password</Link> */}
         <Link to="/helpfullinks">Helpful Links</Link>
+        <button onClickCapture={logout}>Logout</button>
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
+<<<<<<< HEAD
         <Link to="/journal">Journal</Link> 
         <Link to="/resource">Resources</Link>
+=======
+        <Link to="/journal">Journal</Link>
+>>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/signup" element={<SignUp />}/>
+        {/* <Route path="/signup" element={<SignUp />}/> */}
+        <Route path="/signup" element={<SignUp setUser={setUser}  />} />
         <Route path="/login" element={<LogIn />}/>
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
         <Route path="/journal" element={<Journal />}/>
         <Route path="/tranquilzone" element={<TranquilZone />}/>
-        <Route path="/userprofile" element={<UserProfile />}/>
+        <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>
         <Route path="/resource" element={<Resource />}/>
       </Routes>
