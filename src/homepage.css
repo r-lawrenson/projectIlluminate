@@ -14,9 +14,10 @@
 
 
 .homepage img {
-    height:30vh;
-    width:40vw;
-    margin-bottom:2%
+    height:100px;
+    width:500px;
+    margin-bottom:2%;
+    margin-top: 50px;
 }
  .buttons {
      display:flex;
