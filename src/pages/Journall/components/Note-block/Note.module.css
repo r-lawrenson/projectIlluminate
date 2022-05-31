@@ -21,8 +21,8 @@
   position: absolute;
   z-index: 19;
   bottom: 0;
-  max-height: 80px;
-  width: 89%;
+  max-height: 300px;
+  width: 100%;
 }
 
 .titles {
