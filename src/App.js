@@ -37,8 +37,8 @@ const App = () => {
       <BrowserRouter>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/login">Login</Link>
+        {/* <Link to="/signup">Sign Up</Link>
+        <Link to="/login">Login</Link> */}
         {/* <Link to="/resetpassword">Reset Password</Link> */}
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
@@ -51,7 +51,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp setUser={setUser}  />} />
         <Route path="/login" element={<LogIn />}/>
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
-        <Route path="/journal" element={<Journal user={user} />}/>
+        <Route path="/journal" element={<Journal />}/>
         <Route path="/tranquilzone" element={<TranquilZone />}/>
         <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>

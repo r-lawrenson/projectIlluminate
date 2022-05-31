@@ -14,7 +14,7 @@ export const UserProfile = ({user}) => {
             <h1 id='welcome' user={user}> Welcome {user}</h1>
             <div className='buttons'>
                 <button className='btn' onClick={() => navigate('/journal')}>Journal</button>
-                <button className='btn' onClick={() => navigate('/helpfullinks')}>Mental Health Search</button>
+                <button className='btn' onClick={() => navigate('/resource')}>Mental Health Search</button>
                 <button className='btn' onClick={() => navigate('/tranquilzone')}>Tranquil Zone</button>
             </div>
         </div>
