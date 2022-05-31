@@ -8,6 +8,7 @@ export const Header = ({ setIsNote, isNote }) => {
   const onList = () => setIsNote(true);
 
   return (
+    <>
     <header className="header-g">
       <div className="container">
         <div className="logo">{/* <h1 className="title">Journal</h1> */}</div>
@@ -21,5 +22,8 @@ export const Header = ({ setIsNote, isNote }) => {
         </nav>
       </div>
     </header>
+    <hr></hr>
+    </>
+    
   );
 };
