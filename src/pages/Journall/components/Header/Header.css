@@ -1,33 +1,33 @@
-.header {
+.header-g {
   padding: 36px 0;
 }
 
 
-header .container {
+.header-g .container {
   /* border: 1px solid green; */
   /* display: flex;
   align-items: center; */
   flex-direction: column;
-  max-width: 1360px;
-  width: 100%;
+  margin: 0 auto;
+
 }
-.header button{
+.header-g button{
   border:none;
   border-radius:10px;
   margin:5px;
   width:100px;
   height:30px;
 }
-.header input {
+.header-g input {
   height:30px;
   
 }
-.header select {
-  width:80px;
+.header-g select {
+  width:105px;
   height:30px;
 }
 
-.logo {
+.container .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,22 +39,23 @@ header .container {
   margin-left: 18px;
 }
 
-.nav {
+.header-g .container .navs {
   display: flex;
   justify-content: center;
-  max-width: 350px;
+  width: 350px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .navWrapper {
-  /* border:1px solid yellow; */
+  
   display: flex;
-  width:100%;
+  margin: 0 auto;
 
 }
 
 @media screen and (max-width: 690px) {
-  .nav {
+  .navs {
     position: fixed;
     bottom: 15px;
     z-index: 999;
@@ -65,7 +66,7 @@ header .container {
 }
 
 @media screen and (max-width: 320px) {
-  .nav {
+  .navs {
     max-width: 280px;
     /* width: 85%; */
   }

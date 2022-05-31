@@ -29,12 +29,10 @@
         
         
 }
- .buttons {
+ .userlinks .buttons {
      height:30%;
      margin-bottom:2%;
-     gap:10px;
-     /* border: 1px solid blue; */
-     position: absolute;
+     gap:20px;
      top:50%;
 }
  .homepage button {
@@ -43,4 +41,24 @@
      border-radius:20px;
      cursor:pointer;
      font-size:17px;
+ }
+
+
+ .homepage .home-q{
+  
+    outline: dashed 1px black;
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     
+ }
+ .homepage .home-quote{
+     
+    text-align: center;
+     min-width: 100px;
+     margin-top: 50px;
+
+
  }

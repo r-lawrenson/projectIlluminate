@@ -7,7 +7,7 @@ import './Main.css';
 export const Main = () => {
   const {filtredNotes} = useContext(Contex);
   return (
-    <main className="container">
+    <main className="main-container">
       {/* filtering through previous note/note history */}
       {filtredNotes && filtredNotes.map((note, index) => <Note key={`note_${index}`} {...note} />)}
     </main>
