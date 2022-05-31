@@ -40,7 +40,7 @@ export const Journal = React.memo(({user}) => {
         onSmile,
       }}>
       <div>
-      <h1>{user} Journal</h1>
+      <h1>{user}'s Journal</h1>
         <Header setIsNote={setIsNote} isNote={isNote} />
         {isNote ? <Main /> : <AddNote onSubmit={onSubmit} />}
       </div>
