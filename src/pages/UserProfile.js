@@ -3,11 +3,19 @@ import '../userprofile.css'
 import React from 'react'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 export const UserProfile = ({user}) => {
     // const [user, setUser] = useState()
     const navigate = useNavigate();
     return (
+        <>
+        <nav>
+          <Link to="/tranquilzone">Tranquil Zone</Link>
+          <Link to="/userprofile">User Profile</Link>
+          <Link to="/journal">Journal</Link>
+
+        </nav>
         <div className='userprofile'>
             <img src={illuminate} alt='Illuminate Logo'/>
             <div className='userlinks'>
@@ -20,5 +28,6 @@ export const UserProfile = ({user}) => {
             </div>
           
         </div>
+        </>
     )
 }
