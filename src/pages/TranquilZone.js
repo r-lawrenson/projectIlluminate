@@ -89,7 +89,7 @@ export const TranquilZone = () => {
                 <li key={id} className="card">
                   <a
                     href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <p>
                       <img
@@ -117,7 +117,7 @@ export const TranquilZone = () => {
                   <li key={id} className="card">
                     <a
                       href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <p>
                         <img
@@ -147,7 +147,7 @@ export const TranquilZone = () => {
                   <li key={id} className="card">
                     <a
                       href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <p>
                         <img
