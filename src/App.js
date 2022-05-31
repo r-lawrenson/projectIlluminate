@@ -11,7 +11,6 @@ import { Home } from './pages/Home'
 import { SignUp } from './pages/SignUp'
 import { LogIn } from './pages/LogIn'
 import { ResetPassword } from './pages/ResetPassword'
-import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
 //import { Journal } from './pages/Journal'
@@ -40,18 +39,17 @@ const App = () => {
         {/* <Link to="/signup">Sign Up</Link>
         <Link to="/login">Login</Link> */}
         {/* <Link to="/resetpassword">Reset Password</Link> */}
-        <Link to="/tranquilzone">Tranquil Zone</Link>
-        <Link to="/userprofile">User Profile</Link>
+        {/* <Link to="/tranquilzone">Tranquil Zone</Link>
+        <Link to="/userprofile">User Profile</Link> */}
         <Link to="/resource">Resources</Link>
-        <Link to="/journal">Journal</Link>
+        {/* <Link to="/journal">Journal</Link> */}
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
         {/* <Route path="/signup" element={<SignUp />}/> */}
         <Route path="/signup" element={<SignUp setUser={setUser}  />} />
         <Route path="/login" element={<LogIn />}/>
-        <Route path="/helpfullinks" element={<HelpfulLinks />}/>
-        <Route path="/journal" element={<Journal />}/>
+        <Route path="/journal" element={<Journal user={user}/>}/>
         <Route path="/tranquilzone" element={<TranquilZone />}/>
         <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>

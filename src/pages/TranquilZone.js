@@ -1,4 +1,5 @@
 import "../TranquilZoneStyling.css";
+import { Link } from 'react-router-dom'
 
 import { useState, useEffect } from "react";
 
@@ -77,6 +78,13 @@ export const TranquilZone = () => {
 
   return (
     <>
+    
+        <nav>
+          <Link to="/tranquilzone">Tranquil Zone</Link>
+          <Link to="/userprofile">User Profile</Link>
+          <Link to="/journal">Journal</Link>
+
+        </nav>
       <div className="container">
         <main className="main">
           <h1 className="title">Calming Videos</h1>
