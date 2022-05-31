@@ -20,6 +20,15 @@ const fetchPodcast = async (setter) => {
   setter(dat2);
 };
 
+const fetchNoise = async (setter) => {
+  const noisePlaylist = "https://www.googleapis.com/youtube/v3/playlistItems";
+  const response = await fetch(
+    `${noisePlaylist}?part=snippet&playlistId=PLeCKLji5NOeGoEIE8mQUMVmfc2PNZ9_2E&maxResults=50&key=${process.env.REACT_APP_NOISE_API_KEY}`
+  );
+  const datn = await response.json();
+  setter(datn);
+};
+
 const fetchImages = async (setter) => {
   const response = await fetch(
     "https://api.thecatapi.com/v1/images/search?limit=10"
@@ -37,6 +46,7 @@ const fetchDogs = async (setter) => {
 export const TranquilZone = () => {
   const [youtubeData, setyoutubeData] = useState([]);
   const [podcastData, setpodcastData] = useState([]);
+  const [noiseData, setnoiseData] = useState([]);
   const [cats, setCats] = useState([]);
   const [dogs, setDogs] = useState([]);
 
@@ -49,6 +59,11 @@ export const TranquilZone = () => {
     fetchPodcast(setpodcastData);
   }, []);
   console.log(podcastData);
+
+  useEffect(() => {
+    fetchNoise(setnoiseData);
+  }, []);
+  console.log(noiseData);
 
   useEffect(() => {
     fetchImages(setCats);
@@ -74,7 +89,7 @@ export const TranquilZone = () => {
                 <li key={id} className="card">
                   <a
                     href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <p>
                       <img
@@ -102,6 +117,37 @@ export const TranquilZone = () => {
                   <li key={id} className="card">
                     <a
                       href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
+                      target="_blank" rel="noopener noreferrer"
+                    >
+                      <p>
+                        <img
+                          width={medium.width}
+                          height={medium.height}
+                          src={medium.url}
+                          alt=""
+                        />
+                      </p>
+                      <h3>{title}</h3>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+
+          <div className="noise">
+            <h1 className="title">Noise Playlist</h1>
+
+            <ul className="grid">
+              {noiseData.items?.map(({ id, snippet = {} }) => {
+                const { title, thumbnails = {}, resourceId = {} } = snippet;
+                const { medium } = thumbnails;
+                return (
+                  <li key={id} className="card">
+                    <a
+                      href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <p>
                         <img
