@@ -14,6 +14,9 @@ import { ResetPassword } from './pages/ResetPassword'
 import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
+//import { Journal } from './pages/Journal'
+import { Resource } from './pages/ResourcePage';
+
 import { Journal } from './pages//Journall/journal'
 
 const App = () => {
@@ -41,6 +44,8 @@ const App = () => {
         <button onClickCapture={logout}>Logout</button>
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
+        <Link to="/journal">Journal</Link> 
+        <Link to="/resource">Resources</Link>
         <Link to="/journal">Journal</Link>
       </nav>
       <Routes>
@@ -53,6 +58,7 @@ const App = () => {
         <Route path="/tranquilzone" element={<TranquilZone />}/>
         <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>
+        <Route path="/resource" element={<Resource />}/>
       </Routes>
       </BrowserRouter>
           
