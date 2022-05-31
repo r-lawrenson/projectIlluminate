@@ -14,7 +14,7 @@ import { SearchResource } from "../components/resources";
          <div key={index}>
            <p>{item.username}</p>
            <p>{item.helpline}</p>
-           <p>{item.website}</p>
+           <a href={item.website} target="_blank" rel="noopener noreferrer">{item.website}</a>
            </div>
        )
      })}
