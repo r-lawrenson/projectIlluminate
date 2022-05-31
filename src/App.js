@@ -14,13 +14,10 @@ import { ResetPassword } from './pages/ResetPassword'
 import { HelpfulLinks } from './pages/HelpfulLinks'
 import { TranquilZone } from './pages/TranquilZone'
 import { UserProfile } from './pages/UserProfile'
-<<<<<<< HEAD
-import { Journal } from './pages/Journal'
+//import { Journal } from './pages/Journal'
 import { Resource } from './pages/ResourcePage';
 
-=======
 import { Journal } from './pages//Journall/journal'
->>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
 
 const App = () => {
   // const [userInput, setUserInput] = useState()
@@ -47,12 +44,9 @@ const App = () => {
         <button onClickCapture={logout}>Logout</button>
         <Link to="/tranquilzone">Tranquil Zone</Link>
         <Link to="/userprofile">User Profile</Link>
-<<<<<<< HEAD
         <Link to="/journal">Journal</Link> 
         <Link to="/resource">Resources</Link>
-=======
         <Link to="/journal">Journal</Link>
->>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>

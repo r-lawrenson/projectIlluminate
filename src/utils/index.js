@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
 export const fetchImages = async (setter) => {
 	try {
 		const response = await fetch('https://picsum.photos/v2/list')
@@ -65,7 +62,6 @@ export const logout = async (e, setUser, setAuth) => {
 	localStorage.removeItem('MyToken')
 	setAuth(false)
 }
-<<<<<<< HEAD
 export const resourcesSearch = async (keywords, setter) => {
 	try {
 		const response = await fetch(`${process.env.REACT_APP_REST_API}resource/list`, {
@@ -83,6 +79,4 @@ export const resourcesSearch = async (keywords, setter) => {
 		console.log(error)
 	}
 }
-=======
->>>>>>> 82faeba7306c36c88b0fabfd3b6ae5d80b8d5aec
 
