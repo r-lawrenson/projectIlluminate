@@ -69,6 +69,8 @@
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 300px;
     transition: 250ms ease-in-out;
+   
+    
 
   }
 
@@ -105,6 +107,20 @@
     height: 1em;
     margin-left: 0.5rem;
   }
+
+
+
+  .podcast .title{
+    margin-top: 70px;
+  }
+
+  .noise .title{
+    margin-top: 80px;
+  }
+
+  .Cat .title{
+    margin-top: 80px;
+  }
   
   @media (max-width: 600px) {
     .grid {
@@ -124,5 +140,14 @@
  }
 
 
+ .podcast .title{
+   margin-top: 50px;
+ }
+ .noise .title{
+  margin-top: 50px;
+ }
+ .Cat .title{
+  margin-top: 50px;
+ }
 
 
