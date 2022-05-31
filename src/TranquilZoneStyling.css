@@ -75,16 +75,16 @@
   .card:hover{
     transform: translateY(-10px);
   }
-h3 {
+.card h3 {
   color: black;
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
 }
 
-h3:hover{
+.card h3:hover{
   color: whitesmoke;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
   
   .card:hover,
@@ -122,3 +122,7 @@ h3:hover{
    width: 260px;
  
  }
+
+
+
+

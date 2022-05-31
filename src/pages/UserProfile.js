@@ -10,14 +10,14 @@ export const UserProfile = ({user}) => {
     return (
         <div className='userprofile'>
             <img src={illuminate} alt='Illuminate Logo'/>
-        <div className='userlinks'>
-            <h1 id='welcome' user={user}> Welcome {user}</h1>
-            <div className='buttons'>
-                <button className='btn' onClick={() => navigate('/journal')}>Journal</button>
-                <button className='btn' onClick={() => navigate('/resource')}>Mental Health Search</button>
-                <button className='btn' onClick={() => navigate('/tranquilzone')}>Tranquil Zone</button>
+            <div className='userlinks'>
+                <h1 id='welcome' user={user}> Welcome {user}</h1>
+                <div className='buttons'>
+                    <button className='btn' onClick={() => navigate('/journal')}>Journal</button>
+                    <button className='btn' onClick={() => navigate('/resource')}>Mental Health Search</button>
+                    <button className='btn' onClick={() => navigate('/tranquilzone')}>Tranquil Zone</button>
+                </div>
             </div>
-        </div>
           
         </div>
     )

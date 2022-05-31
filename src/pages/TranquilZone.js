@@ -182,9 +182,9 @@ export const TranquilZone = () => {
           <div className="Cat">
             <h1 className="title">Dog Images</h1>
 
-            <ul className="grid">
+            <ul className="grid carousel ">
               {dogs.message?.map((dog, i) => (
-                <li key={i} className="card">
+                <li key={i} className="card item">
                   <div className="cat-container">
                     <img src={dog} alt="dogs" className="cati"></img>
                   </div>

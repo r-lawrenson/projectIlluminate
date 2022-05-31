@@ -11,6 +11,7 @@
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .text {
@@ -23,25 +24,31 @@
   bottom: 0;
   max-height: 300px;
   width: 100%;
+  text-align: center;
 }
 
 .titles {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .title {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.1rem;
+  text-align: center;
   color: #1E2022;
+  
 }
 
 .date {
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
+  text-align: center;
+  width: 60px;
+  
   /* identical to box height */
 
 
@@ -55,6 +62,8 @@
   font-size: 14px;
   line-height: 16px;
   padding-bottom: 9px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .icon {
