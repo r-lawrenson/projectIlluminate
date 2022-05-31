@@ -5,10 +5,10 @@ import { AddNote } from './pages/Add-note';
 
 import { useApp } from './hooks/useApp';
 
-import '../Journal/Journal.css';
+import '../cssFiles/Journal.css';
 import { Contex } from './Contex';
 
-export const Journal = React.memo(() => {
+export const Journal = React.memo(({user}) => {
   const {
     isNote,
     setIsNote,
@@ -32,6 +32,7 @@ export const Journal = React.memo(() => {
         onSmile,
       }}>
       <div>
+      <h1>{user}'s Journal</h1>
         <Header setIsNote={setIsNote} isNote={isNote} />
         {isNote ? <Main /> : <AddNote onSubmit={onSubmit} />}
       </div>

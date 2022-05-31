@@ -32,10 +32,11 @@ export const AddNote =({ onSubmit }) => {
     <div className="form">
       <div>
         <form onSubmit={e => onSubmit(e, title, smile, date, src, text)}>
-          <div>
+          <div id='inputs'>
+          <div id='inputBox'>
             <div>
               <label htmlFor="name">
-                <input
+                <input className='inputBox'
                   type="text"
                   name="name"
                   placeholder="Title"
@@ -47,7 +48,7 @@ export const AddNote =({ onSubmit }) => {
             <div>
               <Select smile={smile} setSmile={onSmile} />
               <label htmlFor="date">
-                <input
+                <input className='inputBox'
                   ref={inputRef}
                   type="text"
                   name="date"
@@ -59,7 +60,8 @@ export const AddNote =({ onSubmit }) => {
                 />
               </label>
             </div>
-          </div>
+            </div>
+          
           {/* Main Journal content box large paragraphs go here */}
           <textarea
             name="description"
@@ -70,6 +72,7 @@ export const AddNote =({ onSubmit }) => {
           <Button>
             Submit
           </Button>
+          </div>
         </form>
       </div>
     </div>

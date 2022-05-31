@@ -49,7 +49,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp setUser={setUser}  />} />
         <Route path="/login" element={<LogIn />}/>
         <Route path="/helpfullinks" element={<HelpfulLinks />}/>
-        <Route path="/journal" element={<Journal />}/>
+        <Route path="/journal" element={<Journal user={user} />}/>
         <Route path="/tranquilzone" element={<TranquilZone />}/>
         <Route path="/userprofile" element={<UserProfile user={user} />}/>
         <Route path="/resetpassword" element={<ResetPassword />}/>

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import { signUp } from '../utils'
+import illuminate from '../images/illuminate-logos_black.png'
 // import { useNavigate } from 'react-router-dom'
+import './cssFiles/signUp.css';
 
 export const SignUp = ({ user, setUser }) => {
 	const [username, setUsername] = useState()
@@ -38,9 +40,13 @@ export const SignUp = ({ user, setUser }) => {
     return (
         <>
         <div id='loginForm'>
+        
           {!isLoggedin || isLoggedin === 'No' ? (
             <>
+            <img id='logo' src={illuminate} alt='Illuminate Logo'/>
+            <div id='login'>
               <form onSubmit={submitHandler}>
+              <h2 id='signup'>Sign Up</h2>
                 <input
                   type="text"
                   onChange={(e) => setUsername(e.target.value)}
@@ -56,11 +62,13 @@ export const SignUp = ({ user, setUser }) => {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
                 />
-                <button type="submit" onClick={submitHandler}>
-                  GO
+                <button id='submitBtn' type="submit" onClick={submitHandler}>
+                  Sign up
                 </button>
               </form>
+            </div>
             </>
+            
           ) : (
             <>
               {/* <h2>{username} is logged in</h2> */}

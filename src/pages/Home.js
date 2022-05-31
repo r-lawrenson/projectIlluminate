@@ -7,7 +7,7 @@ export const Home = () => {
     const navigate = useNavigate();
     return (
         <div className='homepage'>
-            <img src={illuminate} alt='Illuminate Logo'/>
+            <img id='logo' src={illuminate} alt='Illuminate Logo'/>
             <div className='buttons'>
               <div className='signBtn'>
               <button onClick={()=> navigate('/signup')}>Sign Up</button>

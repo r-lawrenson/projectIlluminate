@@ -5,6 +5,7 @@ import Filter from '../Filter/Filter';
 
 
 
+
 export const Header = ({ setIsNote, isNote }) => {
   const onAddNote = () => setIsNote(false);
   const onList = () => setIsNote(true);
@@ -14,7 +15,7 @@ export const Header = ({ setIsNote, isNote }) => {
       <div className="container">
         <div className="logo">
           
-          <h1 className="title">Journal</h1>
+          {/* <h1 className="title">Journal</h1> */}
         </div>
         {/* Search and filter bars */}
         {isNote && <Filter />}
